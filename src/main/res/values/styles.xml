@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="android:buttonStyle">@style/RobotoButtonStyle</item>
+    </style>
+
+    // Set Customize TextView Style
+    <style name="RobotoTextViewStyle">
+        <item name="android:fontFamily">Roboto</item>
+    </style>
+
+    <style name="RobotoButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/actionbar_background</item>
+        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+        <item name="android:icon">@drawable/homespotter_logo</item>
+    </style>
+
+    <style name="MyActionBarTitleText">
+        <item name="android:textColor">@color/icons</item>
+        <item name="android:fontFamily">"sans-serif"</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+
+</resources>

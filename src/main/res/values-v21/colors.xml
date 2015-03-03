@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Material Design Color Sets !-->
+    <item name="primary" type="color">#03A9F4</item>
+    <item name="primary_dark" type="color">#0288D1</item>
+    <item name="primary_light" type="color">#B3E5FC</item>
+    <item name="accent" type="color">#448AFF</item>
+    <item name="primary_text" type="color">#212121</item>
+    <item name="secondary_text" type="color">#727272</item>
+    <item name="icons" type="color">#FFFFFF</item>
+    <item name="divider" type="color">#B6B6B6</item>
+
+
+    <item name="actionbar_background" type="color">#f15f4a</item>
+    <item name="content_background" type="color">#FFFFFF</item>
+    <item name="content_bottom_background" type="color">#FFCDD2</item>
+
+</resources>

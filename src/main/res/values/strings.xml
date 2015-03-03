@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">HomeSpotterChallenge</string>
+
+    <string-array name="location">
+        <item>London,UK</item>
+        <item>Shanghai,China</item>
+    </string-array>
+
+    <string name="title">WeatherForecast</string>
+    <string name="subtitle">Created By Rindt Lin</string>
+
+</resources>
