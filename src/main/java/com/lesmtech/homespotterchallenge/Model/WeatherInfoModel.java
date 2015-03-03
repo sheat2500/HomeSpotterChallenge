@@ -1,11 +1,12 @@
 package com.lesmtech.homespotterchallenge.Model;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by Te on 2/16/15.
  */
-public class WeatherInfoModel {
+public class WeatherInfoModel{
 
     public String name;
     public String id;

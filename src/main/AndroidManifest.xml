@@ -20,6 +20,15 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".WeatherInfoActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.lesmtech.homespotterchallenge.weatherInfoActivity"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+
         // FetchWeatherInfoService
         <service android:name=".FetchInfoService" />
 

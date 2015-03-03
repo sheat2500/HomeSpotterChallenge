@@ -2,6 +2,7 @@ package com.lesmtech.homespotterchallenge;
 
 import android.app.IntentService;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.util.Log;
 
 import com.squareup.okhttp.OkHttpClient;

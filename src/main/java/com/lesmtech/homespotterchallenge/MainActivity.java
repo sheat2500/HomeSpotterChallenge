@@ -10,6 +10,14 @@ import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,6 +44,9 @@ public class MainActivity extends Activity {
 
     private ProgressDialog mProgressDialog;
 
+
+    private static WeatherInfoModel WeatherInfoModel = new WeatherInfoModel();
+
     // BroadcastReceiver
     public class WeatherInfoBroadcast extends BroadcastReceiver {
 
@@ -43,7 +54,6 @@ public class MainActivity extends Activity {
 
         @Override
         public void onReceive(Context context, Intent intent) {
-
 
             boolean responseStatu = intent.getBooleanExtra(FetchInfoService.RESPONSE_STATE, false);
             String responseString = intent.getStringExtra(FetchInfoService.RESPONSE_STRING);
@@ -56,6 +66,7 @@ public class MainActivity extends Activity {
                     GsonBuilder mGsonBuilder = new GsonBuilder();
                     Gson mGson = mGsonBuilder.create();
                     WeatherInfoModel mWeatherInfoModel = mGson.fromJson(responseMessage, WeatherInfoModel.class);
+                    WeatherInfoModel = mWeatherInfoModel;
                     renderView(mWeatherInfoModel);
                 } else {
                     // May have other services
@@ -78,6 +89,9 @@ public class MainActivity extends Activity {
     @InjectView(R.id.location)
     Spinner location;
 
+    @InjectView(R.id.more)
+    Button buttom_more;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,6 +109,13 @@ public class MainActivity extends Activity {
         // Start Service;
         startFetchWeatherInfoService();
     }
+
+    @OnClick(R.id.more)
+    void moreData(){
+        Intent intent = new Intent("com.lesmtech.homespotterchallenge.weatherInfoActivity");
+        startActivity(intent);
+    }
+
 
     private void startFetchWeatherInfoService() {
 
@@ -114,6 +135,7 @@ public class MainActivity extends Activity {
         city.setText(mWeatherInfoModel.name);
         weather.setText(mWeatherInfoModel.weather.get(0).main);
         main.setText(mWeatherInfoModel.main.humidity);
+        buttom_more.setVisibility(View.VISIBLE);
         mProgressDialog.cancel();
     }
 
@@ -148,4 +170,34 @@ public class MainActivity extends Activity {
     private void displayToast(String message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.refresh:
+                if(requestURL == null){
+                    // Do Nothing
+                }
+                else{
+                    startFetchWeatherInfoService();
+                }
+                break;
+            default:
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 }

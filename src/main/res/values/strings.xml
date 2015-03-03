@@ -8,5 +8,6 @@
 
     <string name="title">WeatherForecast</string>
     <string name="subtitle">Created By Rindt Lin</string>
+    <string name="refresh">Refresh</string>
 
 </resources>
