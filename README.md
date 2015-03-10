@@ -1,7 +1,7 @@
 # HomeSpotter Challenge
 ##Introduction
 *  Connect to the service
-** FetchInfoService (IntentService)
+- FetchInfoService (IntentService)
 
 *  Parse the data from the service into a format readable by the application
 *  Display current weather information within the app
