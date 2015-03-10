@@ -1,8 +1,6 @@
 # HomeSpotter Challenge
-##Introduction
+## Introduction
 *  Connect to the service
-- FetchInfoService (IntentService)
-
 *  Parse the data from the service into a format readable by the application
 *  Display current weather information within the app
 *  Does not crash
@@ -10,5 +8,11 @@
 *  Bad/Malformed data
 *  Uses git and github for source control
 *  Includes a readme with instructions for building and verifying the functionality of the app
+
+## Details 
+- FetchInfoService (IntentService) to fetch data from server and communicate with MainActivity
+- WeatherInfoBroadcast, receive JSON from IntentService and parse JSON to Model(Google GSON)
+- isNetworkAvailable Method in Activity to check whether Network is available
+- WeatherInfoActivity (FragmentActivity within a fragment) to show more information about current weather, also for further development in the activity to manage more fragments
 
 ## Demo
