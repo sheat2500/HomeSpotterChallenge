@@ -1,5 +1,5 @@
 # HomeSpotter Challenge
-## Introduction
+## Objective
 *  Connect to the service
 *  Parse the data from the service into a format readable by the application
 *  Display current weather information within the app
@@ -12,6 +12,7 @@
 ## Details 
 - FetchInfoService (IntentService) to fetch data from server and communicate with MainActivity
 - WeatherInfoBroadcast, receive JSON from IntentService and parse JSON to Model(Google GSON)
+- WeatherInfoModel to store Current Weather Data
 - isNetworkAvailable Method in Activity to check whether Network is available
 - WeatherInfoActivity (FragmentActivity within a fragment) to show more information about current weather, also for further development in the activity to manage more fragments
 
