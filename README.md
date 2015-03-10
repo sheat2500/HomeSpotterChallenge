@@ -17,7 +17,8 @@
 - WeatherInfoActivity (FragmentActivity within a fragment) to show more information about current weather, also for further development in the activity to manage more fragments
 
 ## Demo
-![alt tag](https://github.com/sheat2500/HomeSpotterChallenge/blob/master/demo/1.png = 400 x 750)
+
+![alt tag](https://github.com/sheat2500/HomeSpotterChallenge/blob/master/demo/1.png)
 ![alt tag](https://github.com/sheat2500/HomeSpotterChallenge/blob/master/demo/2.png)
 
 ## Reference
