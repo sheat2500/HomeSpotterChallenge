@@ -11,7 +11,7 @@
         android:layout_marginLeft="80dp">
 
         <TextView
-            android:id="@+id/name_label"
+            android:id="@+id/city_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CITY"
@@ -45,26 +45,9 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="10dp" />
 
-        <TextView
-            android:id="@+id/main_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="MAIN"
-            android:textStyle="bold"
-            android:textSize="15dp"
-            android:textColor="#f47054" />
 
         <TextView
-            android:id="@+id/main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp" />
-
-
-        <TextView
-            android:id="@+id/temp_label"
+            android:id="@+id/temp_min_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TEMP"
@@ -73,13 +56,29 @@
             android:textColor="#f47054" />
 
         <TextView
-            android:id="@+id/temp"
+            android:id="@+id/temp_min"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="10dp" />
 
+        <TextView
+            android:id="@+id/temp_max_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MAIN"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textColor="#f47054" />
+
+        <TextView
+            android:id="@+id/temp_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp" />
 
     </LinearLayout>
 

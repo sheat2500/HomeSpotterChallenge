@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
     private ProgressDialog mProgressDialog;
 
 
-    private static WeatherInfoModel WeatherInfoModel = new WeatherInfoModel();
+    public static WeatherInfoModel WeatherInfoModel = new WeatherInfoModel();
 
     // BroadcastReceiver
     public class WeatherInfoBroadcast extends BroadcastReceiver {
